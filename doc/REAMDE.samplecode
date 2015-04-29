@@ -1,0 +1,29 @@
+Hello world README
+
+- suppose we want to implement a map on the GPU, squaring all the items in a 
+  floating point number list
+
+1) this is a map(sq) pattern. Provide the sq kernel function as SKEPU macro: 
+
+	UNARY_FUNC(sq,  double, x, return(x*x);)
+
+   this is to be provided in a user.h file (or other file named as 
+ 	USERMACROFILE
+   in the Makefile
+
+2) this is a map pattern, then name it (kind of patter, kernel function 
+   parameter, with a macro in the USERMACRO file: 
+
+ 	ERL_GPU_MAP(sq,mapsq)
+
+3) compile the files
+
+	make gpu
+
+4) use the map from Erlang: 
+
+   a) start the erlang interpreter
+   b) compiler the mapper.erl 
+   c) use the mapper:mapsq/1
+  
+   or precompile the module and invoke it with the usual Erlang mechanisms
