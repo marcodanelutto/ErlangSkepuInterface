@@ -7,7 +7,7 @@ CONTENTS
 			installation of erlang (in /usr/local)
 	Skepu		SKEPU distribution (1.0)
 
-	mapper.erl	NIF bindinds
+	mapper.erl	NIF bindings
 
 RUN
 
