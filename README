@@ -1,0 +1,20 @@
+Heterogeneous skeleton (map, reduce) in Erlang
+
+CONTENTS
+	mapper.cpp	the OpenMP/CPU implementation
+	mapper.cu       the CUDA implemention
+	Makefile	produces the two versions, assuming a standard 
+			installation of erlang (in /usr/local)
+	Skepu		SKEPU distribution (1.0)
+
+	mapper.erl	NIF bindinds
+
+RUN
+
+	1) unpack the archive
+        2) edit the user.h file to include your own functions and skeletons
+	3) compile: make cpu & make gpu
+	4) run erl: erl
+	5) compile the NIF interface, from erlang: c(mapper).
+	7) use the skeletons defined in the user.h file
+
