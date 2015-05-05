@@ -18,3 +18,7 @@ RUN
 	5) compile the NIF interface, from erlang: c(mapper).
 	7) use the skeletons defined in the user.h file
 
+REQUISITES
+
+You need a Linux system, with Erlang installed and working (R15 or later), 
+SKEPU installed and working (either with CUDA or OpenCL). 
